@@ -10,10 +10,9 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
-// server.put('/v1/admin', (req, res) => {
-//   adminConfig = mockFile.setGlobalConfig(req.body);
-//   send(() => res.sendStatus(200));
-// });
+server.get('/test', (req, res) => {
+  res.sendStatus(200);
+});
 
 server.listen(3000, () => {
   console.log('JSON Server is running');
